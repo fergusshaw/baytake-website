@@ -1,0 +1,361 @@
+*{
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  text-decoration: none;
+  box-sizing: border-box;
+  font-family: "Open Sans", serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+  font-variation-settings: "wdth" 100;
+}
+
+html, body{
+  height: 100%;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+header{
+  width: 100%;
+  height: 80px;
+  background-color:#0059a3;
+  position: fixed;
+  z-index: 1;
+ }
+
+.inner_header{
+  width: 75%;
+  height: 100%;
+  margin: 0 auto;
+  background-color: #0059a3;
+}
+
+.logo_container{
+  height: 100%;
+  display: table;
+  float: left;
+}
+
+.logo_container img{
+  height: 80px;
+  width: 346.5px;
+  display: table-cell;
+  vertical-align: middle;
+}
+
+nav{
+  float: right;
+  height: 100%;
+}
+
+nav a{
+  height: 100%;
+  display: table;
+  float: left;
+  padding: 0px 35px 0px 10px;
+}
+
+nav a li{
+  display: table-cell;
+  vertical-align: middle;
+  height: 100%;
+  color: white;
+  font-size: 16px;
+}
+
+.main_bit{
+  flex: 1;
+  /*min-height: calc(100vh - 50px);*/
+  padding-top: 80px; /* header height */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.main_bit.index{
+  background-color: #0059a3;
+}
+
+.slideshow_container{
+  max-width: 100vw;
+  max-height: 100vh;
+  width: 100vw;
+  height: auto/*100%*/;
+  position: relative;
+  margin: auto;
+  overflow: hidden;
+}
+
+.slideshow_container img{
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: cover;
+}
+
+.button_container{
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  gap: 50px;
+}
+
+.button_container button{
+  font-size: 24px;
+  background-color: white;
+  color: black;
+  border-radius: 8px;
+  border: 2px solid #0059a3;
+  padding: 10px 24px;
+  flex: 1;
+  max-width: 250px;
+  text-align: center;
+}
+
+.button_container button:hover{
+  transition-duration: 0.4s;
+  background-color: #0059a3;
+  color:white;
+  cursor: pointer;
+}
+
+
+.slides {
+  display: none;
+}
+
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  margin-top: -22px;
+  padding: 16px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+.prev:hover, .next:hover {
+  background-color: rgba(0,0,0,0.8);
+}
+
+.dot {
+  z-index: 2;
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.dots_container{
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  text-align: center;
+  z-index: 2;
+  margin-bottom: 0;
+}
+
+.active, .dot:hover {
+  background-color: #717171;
+}
+
+.fade {
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@keyframes fade {
+  from {opacity: .4}
+  to {opacity: 1}
+}
+
+footer{
+  background-color: #0059a3;
+  width: 100%;
+}
+
+.footer_content{
+  padding: 2rem;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.footer_contact{
+  text-align: left;
+  width:25%;
+  padding-left: 80px;
+  line-height: 2.25;
+  font-size: 1vw;
+}
+
+.footer_contact a img{
+  width: 50px; 
+  height: 50px;
+}
+
+.footer_address{
+  width: 40%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-left: 80px;
+  line-height: 2;
+  font-size: 1.1vw;
+}
+
+.footer_address img{
+  max-width: 25vw;
+}
+
+.footer_hours{
+  align-items: right;
+  padding-left: 30px;
+  width: 30%;
+  line-height: 3.25;
+  overflow: hidden;
+  font-size: 0.9vw;
+}
+
+.opening_days table{
+  line-height: 1.75;
+}
+
+.opening_days td{
+  padding-right: 40px;
+}
+
+
+
+/* order.html */ 
+
+.order{
+  background-color: white;
+}
+
+.order_text {
+  text-align: center;
+  padding: 90px 0px;
+}
+
+
+/* menu.html */
+
+.bold{
+  font-weight: bold;
+}
+
+.main_bit.menu{
+  display: flex;
+  justify-content: center;
+}
+
+.main_bit.menu h1, h4{
+  margin-left:10px;
+}
+
+.fried_food{
+  width: 100%;
+  line-height: 1.5;
+}
+
+.fried_tables{
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.fried_singular{
+  flex: 1;
+  margin-left:10px;
+}
+
+.right_column{
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  flex: 0.8;
+  margin-left: 40px;
+  padding-left: 40px;
+}
+
+.main_bit table{
+  border-collapse: collapse;
+  width: 100%;
+}
+
+.line{
+  border-bottom: 2px solid black;
+}
+
+.burgers{
+  width:100%;
+}
+
+.burger_tables{
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.burgers_left{
+  width:45%;
+  flex: 1;
+  padding-right: 20px;
+  margin-left:10px;
+}
+
+.burgers_right{
+  width: 45%;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  flex: 1;
+  padding-left: 20px;
+  margin-right: 10px;
+}
+
+tr:empty{
+  height:7px;
+  display: table-row;
+}
+
+.wrap_tables, .packs_combos table, .doughnuts table, .salads table, .sauce_table{
+  margin-left: 10px;
+}
+
+.left{
+  width:40%;
+}
+
+.salad_left{
+  width: 40%;
+}
+
+.subtext{
+  font-size: 1em;
+  margin-left: 10px;
+}
+
+
+
